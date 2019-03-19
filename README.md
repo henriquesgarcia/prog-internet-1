@@ -1,6 +1,6 @@
 # Henrique da Silva Garcia
 
-## Contato
+- 23 anos
 - e-mail: enriqe_garcia15@hotmail.com
 
 ## Habilidades
