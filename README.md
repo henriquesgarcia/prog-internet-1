@@ -12,10 +12,10 @@
 - Criação de Protótipos usando Adobe XD.
 
 ## Interesses Acadêmicos e Profissionais
+- UX/UI Designer;
 - Desenvolvimento e implantação de aplicações web-mobile;
 - Inteligência Artificial;
-- Machine Learning;
-- UX/UI Designer.
+- Machine Learning.
 
 ## Experiência Profissional
 - Trabalho atualmente na equipe de suporte técnico no setor de Informática do Instituto Dom Barreto.
