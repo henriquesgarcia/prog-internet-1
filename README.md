@@ -21,5 +21,5 @@
 - Trabalho atualmente na equipe de suporte técnico no setor de Informática do Instituto Dom Barreto.
 
 ## Portfólio
-- MarketPlace: projeto final da disciplina de Engenharia de Software I
-- Divlugação e Controle de Estoque da Zeronet Salgados (IFPI)
+- MarketPlace: (protótipo) projeto final da disciplina de Engenharia de Software I;
+- Divlugação e Controle de Estoque da Zeronet Salgados (IFPI) - apenas banners com produtos e preços.
