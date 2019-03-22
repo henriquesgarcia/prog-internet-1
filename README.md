@@ -21,5 +21,10 @@
 - Trabalho atualmente na equipe de suporte técnico no setor de Informática do Instituto Dom Barreto.
 
 ## Portfólio
-- MarketPlace: (protótipo) projeto final da disciplina de Engenharia de Software I;
+- MarketPlace: (protótipo) projeto final da disciplina de Engenharia de Software I
+  - Integrantes:
+    - Henrique Garcia
+    - Marcos Ferreira
+    - Guilherme Sousa
+    - Raisson Carvalho
 - Divlugação e Controle de Estoque da Zeronet Salgados (IFPI) - apenas banners com produtos e preços.
