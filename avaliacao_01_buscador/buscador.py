@@ -15,15 +15,15 @@ import requests_cache
 
 
 def get_link(soup, url):
-    
-    internal_link = []
+
+    links = []
 
     for link in soup.findAll('a', href=re.compile('^(http|www)((?!' + url + ').)*$')):
         if link.attrs['href'] is not None:
-            if link.attrs['href'] not in internal_link:
-                internal_link.append(link.attrs['href'])
+            if link.attrs['href'] not in links:
+                links.append(link.attrs['href'])
 
-    link = internal_link[random.randint(0, len(internal_link) - 1)]
+    link = links[random.randint(0, len(links) - 1)]
 
     return link
 
@@ -80,7 +80,8 @@ def get_all_links_to_search(url, deth):
 if __name__ == '__main__':
     requests_cache.install_cache(cache_name='buscador_cache', backend='sqlite', expire_after=15)
     # requests_cache.clear()
-    search('https://pt.wikipedia.org', 3, 'goleador')
+    search('https://www.globo.com/', 2, 'futebol')
 
     # https://pt.wikipedia.org
+    # https://www.globo.com/busca/
     # https://store.steampowered.com/search/
