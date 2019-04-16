@@ -71,7 +71,7 @@ def get_all_links_to_search(url, deth):
     soup = make_soup(url)
     link = get_link(soup, url)
 
-    for i in range(deth-1):
+    for i in range(deth):
         new_soup = make_soup(link)
         new_link = get_link(new_soup, link)
         links.append(new_link)
@@ -82,6 +82,7 @@ def get_all_links_to_search(url, deth):
 if __name__ == '__main__':
     requests_cache.install_cache(cache_name='buscador_cache', backend='sqlite', expire_after=15)
     # requests_cache.clear()
-    search('https://store.steampowered.com/search/', 5, 'fps')
+    search('https://pt.wikipedia.org', 2, 'tiro')
 
-    #'https://pt.wikipedia.org'
+    # https://pt.wikipedia.org
+    # https://store.steampowered.com/search/
