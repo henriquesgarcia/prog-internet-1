@@ -57,7 +57,7 @@ def search_keyword(url, keyword):
 
 def make_soup(url):
 
-    response = requests.get(url, timeout=10)
+    response = requests.get(url, timeout=(3.05,27))
     soup = BeautifulSoup(response.text, 'html5lib')
 
     return soup
@@ -78,9 +78,9 @@ def get_all_links_to_search(url, deth):
 
 
 if __name__ == '__main__':
-    requests_cache.install_cache(cache_name='buscador_cache', backend='sqlite', expire_after=15)
+    requests_cache.install_cache(cache_name='buscador_cache', backend='sqlite', expire_after=3600)
     # requests_cache.clear()
-    search('https://www.globo.com/', 2, 'futebol')
+    search('https://www.globo.com/busca/', 3, 'futebol')
 
     # https://pt.wikipedia.org
     # https://www.globo.com/busca/
