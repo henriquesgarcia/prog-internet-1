@@ -28,25 +28,6 @@ def get_link(soup, url):
     return link
 
 
-def search(url, deth, keyword):
-
-    soup = make_soup(url)
-    
-    print('\n***** Buscador.py *****\n')
-    print('URL: ' + url, '\n---------------------------------------')
-    search_keyword(url, keyword)
-    link = get_link(soup, url)
-
-    links = get_all_links_to_search(url, deth)
-
-    for link in links:
-        print('---------------------------------------')
-        print('Link: ' +link)
-        search_keyword(link, keyword)
-    
-    requests_cache.core.remove_expired_responses()
-
-
 def search_keyword(url, keyword):
 
     soup = make_soup(url)
@@ -75,6 +56,24 @@ def get_all_links_to_search(url, deth):
         links.append(new_link)
 
     return links
+
+
+def search(url, deth, keyword):
+
+    soup = make_soup(url)
+    
+    print('\n***** Buscador.py *****\n')
+    print('URL: ' + url, '\n---------------------------------------')
+    search_keyword(url, keyword)
+
+    links = get_all_links_to_search(url, deth)
+
+    for link in links:
+        print('---------------------------------------')
+        print('Link: ' + link)
+        search_keyword(link, keyword)
+    
+    requests_cache.core.remove_expired_responses()
 
 
 if __name__ == '__main__':
