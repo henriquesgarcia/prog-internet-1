@@ -1,4 +1,12 @@
-from urllib.request import urlopen
+#--------------------------------------
+# Prova 01 - Programação para Internet
+#
+# Integrantes: 
+#   Raisson Carvalho
+#   Henrique Garcia
+#--------------------------------------
+
+
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -7,6 +15,7 @@ import requests_cache
 
 
 def get_link(soup, url):
+    
     internal_link = []
 
     for link in soup.findAll('a', href=re.compile('^(http|www)((?!' + url + ').)*$')):
@@ -26,27 +35,16 @@ def search(url, deth, keyword):
     print('\n***** Buscador.py *****\n')
     print('URL: ' + url, '\n---------------------------------------')
     search_keyword(url, keyword)
-    print('---------------------------------------')
     link = get_link(soup, url)
-    print(link)
 
     links = get_all_links_to_search(url, deth)
 
     for link in links:
+        print('---------------------------------------')
         print('Link: ' +link)
         search_keyword(link, keyword)
     
     requests_cache.core.remove_expired_responses()
-
-
-# def show_textual_response(url, keyword):
-
-#     links = get_links(new_article)
-#     newHtml = urlopen(url + keyword)
-#     newSoup = BeautifulSoup(newHtml, 'html5lib')
-#     keyword = newSoup.text.upper().find(keyword)
-
-#     print(newSoup.text[keyword - 30:keyword + 40], '\n')
 
 
 def search_keyword(url, keyword):
@@ -59,7 +57,7 @@ def search_keyword(url, keyword):
 
 def make_soup(url):
 
-    response = requests.get(url, timeout=5)
+    response = requests.get(url, timeout=10)
     soup = BeautifulSoup(response.text, 'html5lib')
 
     return soup
@@ -82,7 +80,7 @@ def get_all_links_to_search(url, deth):
 if __name__ == '__main__':
     requests_cache.install_cache(cache_name='buscador_cache', backend='sqlite', expire_after=15)
     # requests_cache.clear()
-    search('https://pt.wikipedia.org', 2, 'tiro')
+    search('https://pt.wikipedia.org', 3, 'goleador')
 
     # https://pt.wikipedia.org
     # https://store.steampowered.com/search/
