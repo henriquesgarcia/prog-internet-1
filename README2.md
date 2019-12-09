@@ -19,3 +19,7 @@ tendo a possibilidade de ver quem é o proprietário e também de entrar em cont
 - JWT (JSON Web Token) <br>
 <h3>Documentação</h3>
 - Swagger <br>
+
+## Alunos:
+- <strong>Raisson Carvalho</strong>
+- <strong>Henrique Garcia</strong>
